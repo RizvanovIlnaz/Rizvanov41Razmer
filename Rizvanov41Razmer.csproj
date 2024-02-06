@@ -95,9 +95,6 @@
     <Compile Include="Role.cs">
       <DependentUpon>RizvanovModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="sysdiagrams.cs">
-      <DependentUpon>RizvanovModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="User.cs">
       <DependentUpon>RizvanovModel.tt</DependentUpon>
     </Compile>
@@ -191,19 +188,21 @@
     <Resource Include="Res\J384T6.jpg" />
     <Resource Include="Res\А112Т4.jpg" />
     <Resource Include="Resources\picture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="RizvanovModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>RizvanovModel.Context.cs</LastGenOutput>
       <DependentUpon>RizvanovModel.edmx</DependentUpon>
+      <LastGenOutput>RizvanovModel.Context.cs</LastGenOutput>
     </Content>
     <Content Include="RizvanovModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>RizvanovModel.edmx</DependentUpon>
       <LastGenOutput>RizvanovModel.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

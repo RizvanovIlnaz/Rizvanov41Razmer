@@ -60,7 +60,6 @@
                                 <TextBlock Text=" %" HorizontalAlignment="Center" FontSize="50"/>
                             </StackPanel>
                         </StackPanel>
-
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>

@@ -16,7 +16,7 @@ namespace Rizvanov41Razmer
     {
         public int OrderID { get; set; }
         public string ProductArticleNumber { get; set; }
-        public string Amount { get; set; }
+        public Nullable<int> Amount { get; set; }
     
         public virtual Order Order { get; set; }
         public virtual Product Product { get; set; }

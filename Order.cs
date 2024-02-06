@@ -22,13 +22,15 @@ namespace Rizvanov41Razmer
     
         public int OrderID { get; set; }
         public Nullable<System.DateTime> OrderDate { get; set; }
-        public Nullable<System.DateTime> OrderDeliveryDate { get; set; }
-        public Nullable<int> OrderPickupPoint { get; set; }
-        public string OrderClientName { get; set; }
-        public string OrderGetCode { get; set; }
+        public System.DateTime OrderDeliveryDate { get; set; }
+        public int OrderPickupPoint { get; set; }
+        public Nullable<int> OrderClient { get; set; }
+        public string OrderReceiveCode { get; set; }
         public string OrderStatus { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderProduct> OrderProduct { get; set; }
+        public virtual PickupPoint PickupPoint { get; set; }
+        public virtual User User { get; set; }
     }
 }

@@ -24,7 +24,7 @@ namespace Rizvanov41Razmer
         public string ProductName { get; set; }
         public string ProductEdIzm { get; set; }
         public decimal ProductCost { get; set; }
-        public string ProductDiscountMax { get; set; }
+        public Nullable<byte> ProductDiscountMax { get; set; }
         public string ProductManufacturer { get; set; }
         public string ProductImporter { get; set; }
         public string ProductCategory { get; set; }
