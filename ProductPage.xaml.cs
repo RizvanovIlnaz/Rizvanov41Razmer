@@ -23,6 +23,9 @@ namespace Rizvanov41Razmer
         public ProductPage()
         {
             InitializeComponent();
+
+            List<Product> currentProducts = Rizvanov_TradeEntities.GetContext().Product.ToList();
+            ProductListView.ItemsSource = currentProducts;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
