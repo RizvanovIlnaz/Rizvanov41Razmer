@@ -23,7 +23,7 @@ namespace Rizvanov41Razmer
         public MainWindow()
         {
             InitializeComponent();
-            MainFrame.Navigate(new ProductPage());
+            MainFrame.Navigate(new ProductPage(null));
             Manager.MainFrame = MainFrame;
         }
 
