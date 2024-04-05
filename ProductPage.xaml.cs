@@ -24,14 +24,40 @@ namespace Rizvanov41Razmer
         public ProductPage(User user)
         {
             InitializeComponent();
- 
-            List<Product> currentProduct = Rizvanov_TradeEntities.GetContext().Product.ToList();
-            ProductListView.ItemsSource = currentProduct;
-            CurAmount.Text = currentProduct.Count.ToString();
+
+            InitializeComponent();
+            if (user != null)
+            {
+                FIOTB.Text = user.UserSurname + " " + user.UserName + " " + user.UserPatronymic;
+                switch (user.UserRole)
+                {
+                    case 1:
+                        RoleTB.Text = "Администратор"; break;
+                    case 2:
+                        RoleTB.Text = "Клиент"; break;
+                    case 3:
+                        RoleTB.Text = "Менеджер"; break;
+                }
+                URole.Visibility = Visibility.Visible;
+                RoleTB.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                FIOTB.Text = "Гость";
+                URole.Visibility = Visibility.Hidden;
+                RoleTB.Visibility = Visibility.Hidden;
+            }
+
+
+
+            List<Product> currentProducts = Rizvanov_TradeEntities.GetContext().Product.ToList();
+            ProductListView.ItemsSource = currentProducts;
+
+
             MCount.Text = Rizvanov_TradeEntities.GetContext().Product.ToList().Count.ToString();
+            Filter.SelectedIndex = 0;
 
             Update();
-
         }
 
         private void Update()
