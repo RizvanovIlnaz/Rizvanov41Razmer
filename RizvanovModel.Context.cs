@@ -15,13 +15,13 @@ namespace Rizvanov41Razmer
     
     public partial class Rizvanov_TradeEntities : DbContext
     {
+
         private static Rizvanov_TradeEntities _context;
 
         public static Rizvanov_TradeEntities GetContext()
         {
-            if (_context == null)
+            if(_context == null )
                 _context = new Rizvanov_TradeEntities();
-
             return _context;
         }
         public Rizvanov_TradeEntities()
@@ -40,5 +40,6 @@ namespace Rizvanov41Razmer
         public virtual DbSet<Product> Product { get; set; }
         public virtual DbSet<Role> Role { get; set; }
         public virtual DbSet<User> User { get; set; }
+        public object PickUpPoint { get; internal set; }
     }
 }
